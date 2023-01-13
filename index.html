@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="calculator">
+    <div class="wrapper">
+      <div class="calculator__container">
+        <form class="calculator__form">
+          <h1 class="calculator__title">Введите значения</h1>
+          <div class="calculator__form-container">
+          <div class="calculator__width con">
+            <label for="width">Ширина</label>
+          <input type="number" step="0.01" name="width" id="width"> <span>m.</span>
+          </div>
+          <div class="calculator__height con">
+            <label for="height">Высота</label>
+          <input type="number" step="0.01" name="height" id="height"> <span>m.</span>
+          </div>
+          <div class="calculator__line con">
+            <label for="line">Длинна резки</label> 
+            <input type="number" step="0.01" name="line" id="line" value="0"> <span>m.</span>
+          </div>
+          <div class="calculator__select con">
+            <label for="select">Толщина фанеры</label>
+            <select name="select" id="select">
+              <option disabled>Толщина фанеры</option>
+              <option value="0">3 mm.</option>
+              <option value="1">4 mm.</option>
+              <option value="2">6 mm.</option>
+            </select>
+          </div>
+        </div>
+        <button> Рассчитать</button>
+      </form>
+      <p class="result"></p>
+      </div>
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+</html>
