@@ -8,7 +8,6 @@ form.addEventListener("submit", function (e) {
   const priceline = [25, 30, 35]
   const priceWidth = [600, 800, 1000]
 
-
   let width =  Number(formData.get('width'))
   let height = Number(formData.get('height'))
   let line = Number(formData.get('line')) || 0.00000000001
@@ -21,7 +20,5 @@ form.addEventListener("submit", function (e) {
   res.innerHTML =`${result} р.`
   res.style.backgroundColor = "green"
   form.reset()
-  }
-
-  
+  } 
 })
