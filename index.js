@@ -1,5 +1,5 @@
 const form = document.querySelector(".calculator__form")
-const res = document.querySelector(".result")
+const res = document.querySelectorAll(".result")
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -15,12 +15,13 @@ form.addEventListener("submit", function (e) {
   let select = Number(formData.get('select')) 
   let material = Number(formData.get('material')) 
   if(!width || !height || !line) {
-    res.innerHTML= "Где то ошибка!!!"
-    res.style.backgroundColor = "red"
+    res[0].innerHTML= "Где то ошибка!!!"
+    res[0].style.backgroundColor = "red"
   } else {
     let result =Math.floor(priceWidth[material][select] / 2.25 * (width * height) + line * priceline[select] + abres * 15)
-  res.innerHTML =`${result} р.`
-  res.style.backgroundColor = "green"
-  form.reset()
+  res[0].innerHTML =`${result} р.`
+  res[0].style.backgroundColor = "green"
+  res[1].innerHTML =`${Math.floor(line * priceline[select] * 0.3)} р.`
+  res[1].style.backgroundColor = "blue"
   } 
 })
