@@ -39,6 +39,17 @@ input, select {
   width: 80%;
 }
 
+.material input,
+.material label{
+  display: inline;
+  width: auto;
+}
+
+.material {
+  grid-column: span 2;
+
+}
+
 .con{
   height: 80px;
 }
