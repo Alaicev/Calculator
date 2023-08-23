@@ -5,9 +5,8 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   let formData = new FormData(form)
 
-  const priceline = [25, 30, 35]
-  const priceWidth = [[710, 750, 1100],[4300, 5600, 8400],[16000, 16000, 16000]]
-
+  const priceline = [25, 30, 45, 50, 60]
+  const priceWidth = [[710, 750, 1100, 1200, 1200],[4300, 5600, 8400, 9500, 0],[16000, 16000, 16000, 16000, 0]]
   let width =  Number(formData.get('width'))
   let height = Number(formData.get('height'))
   let line = Number(formData.get('line')) || 0.00000000001
